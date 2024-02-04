@@ -1,7 +1,7 @@
 site_name: MkDocs example
 site_url: http://localhost:8000
 repo_name: GitHub
-repo_url: https://github.com/Antari-yan
+repo_url: https://github.com/Antari-yan/MkDocs-Example
 site_description: MkDocs example
 site_author: Antari-yan
 #site_favicon: favicon.ico
