@@ -9,6 +9,7 @@ These plugins allow displaying Code via Docstrings and Swagger within the docume
 The used example Python Code can be found [here](https://github.com/sphinx-contrib/napoleon/blob/master/docs/source/example_google.py)  
 The Swagger example source can be found [here](https://petstore.swagger.io).
 
+There are also some examples for options that can be added in the `mkdocs.yml` file.
 
 ## Usage
 ```bash
