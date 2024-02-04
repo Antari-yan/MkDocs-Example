@@ -1,0 +1,82 @@
+site_name: MkDocs example
+site_url: http://localhost:8000
+repo_name: GitHub
+repo_url: https://github.com/Antari-yan
+site_description: MkDocs example
+site_author: Antari-yan
+#site_favicon: favicon.ico
+#copyright: Copyright © 2024
+
+#docs_dir: doc/manuals
+#site_dir: html
+#use_directory_urls: false
+
+
+nav:
+    - Home: index.md
+    - Cheat Sheet: cheat_sheet/index.md
+    - Python Code Documentation:
+        - Full File: python_documentation/full_file.md
+        - Single Class: python_documentation/single_class.md
+        - Single Function from a Class: python_documentation/single_class_reduced.md
+    - External:
+        - Swagger Example: swagger.md
+
+
+exclude_docs: |
+  api-config.json    # A file with this name anywhere.
+  drafts/            # A "drafts" directory anywhere.
+  /requirements.txt  # Top-level "docs/requirements.txt".
+  *.py               # Any file with this extension anywhere.
+  !/foo/example.py   # But keep this particular file.
+
+
+theme:
+    name: readthedocs
+    #logo: logo.png
+    locale: en
+    highlightjs: true
+    hljs_languages:
+        - yaml
+    navigation_depth: 4
+    collapse_navigation: true
+    titles_only: false
+    sticky_navigation: true
+    shortcuts:  # https://www.toptal.com/developers/keycode
+        help: 191    # ?
+        next: 39     # right arrow
+        previous: 37 # left arrow
+        search: 83   # s
+
+
+extra_css:
+    - extra.css
+
+
+# https://python-markdown.github.io/extensions/
+markdown_extensions:
+    - toc:
+        permalink: True
+
+
+plugins:
+    - search
+    - minify:
+        minify_html: true
+        minify_js: true
+        minify_css: true
+        htmlmin_opts:
+            remove_comments: true
+        cache_safe: true
+        #js_files:
+        #    - my/javascript/dir/file1.js
+        #css_files:
+        #    - my/css/dir/file1.css
+    - mkdocstrings:
+        enabled: !ENV [ENABLE_MKDOCSTRINGS, true]
+        default_handler: python
+        handlers:
+            python:
+                options:
+                    show_source: false
+    - render_swagger

@@ -1,0 +1,38 @@
+.wy-side-nav-search {
+  background-color: black;
+}
+
+.wy-menu-vertical li.toctree-l1.current > a {
+  border-bottom: 1px solid black;
+  border-top: 1px solid white;
+}
+.wy-menu-vertical li.current > a:hover, .wy-menu-vertical li.on a:hover {
+  background: darkgray;
+}
+
+
+
+.wy-body-for-nav {
+  background: black;
+}
+
+.wy-nav-content-wrap {
+  background: black;
+}
+
+.wy-nav-content {
+  background-color: rgb(172, 172, 172);
+  max-width: 100%;
+}
+
+h1 {
+  color: gray;
+}
+
+a:visited {
+  color: #dbdbdb;
+}
+
+a {
+  color: #ffffff;
+}
