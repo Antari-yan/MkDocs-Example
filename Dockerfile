@@ -7,8 +7,8 @@ ENV PATH=$PATH:/root/.local/bin
 
 # Perform build and cleanup artifacts
 RUN apk add --no-cache git curl \
-    && pip install --upgrade pip \
-    && pip install --user -r requirements.txt \
+    && pip install --upgrade pip --no-cache-dir \
+    && pip install --user -r requirements.txt --no-cache-dir \
     && rm -rf /tmp/*
 
 # Set working directory
